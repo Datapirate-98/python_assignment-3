@@ -6,11 +6,18 @@ def myreduce(function, *args):
     for i in range(1,len(args)):
         res = function(res,args[i])
     return res
+reduce(lamda x,y:x+y, 1,2,3,4)
 
 2.
 def myfilter(function, seq):
     res = [i for i in seq if function(i)]
     return res
+def func(n):
+    if n!=2:
+        return True
+    else:
+        return False
+print(myfilter(func,[1,2,3,2,4,3]))
 
 3.
 l = ["x","y","z"]
